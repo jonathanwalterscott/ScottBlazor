@@ -1,0 +1,47 @@
+@inherits ComponentBase
+
+@namespace ScottBlazorLibrary.Buttons
+
+<style>
+    .button-default {
+        color: white;
+        background-color: rgb(57, 88, 132);
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px grey;
+        margin: 10px;
+    }
+
+        .button-default:hover {
+            box-shadow: 4px 4px 4px grey;
+            background-color: rgb(70, 109, 163);
+            transition: background-color 0.15s, box-shadow 0.15s;
+        }
+        .button-default:disabled {
+            background-color: grey;
+            box-shadow: none;
+        }
+
+    .button-cancel {
+        color: white;
+        background-color: red;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px grey;
+        margin: 10px;
+    }
+
+        .button-cancel:hover {
+            box-shadow: 4px 4px 4px grey;
+            background-color: rgb(254, 90, 89);
+            transition: background-color 0.15s, box-shadow 0.15s;
+        }
+        .button-cancel:disabled {
+            background-color: grey;
+            box-shadow: none;
+        }
+</style>
+<button class="@Style.StyleName" disabled="@Disabled">@Text</button>
+
