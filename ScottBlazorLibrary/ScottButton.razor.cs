@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace ScottBlazorLibrary.Buttons
 {
@@ -22,5 +23,8 @@ namespace ScottBlazorLibrary.Buttons
         {
             return base.OnParametersSetAsync();
         }
+
+        [Parameter]
+        public EventCallback<MouseEventArgs> OnClickCallback { get; set; }
     }
 }
