@@ -8,10 +8,9 @@ namespace ScottBlazorLibrary.UseCase.ServerSideRendering.Components.Pages
     {
         private ScottButton DefaultButton { get; set; }
         private ScottButton CancelButton { get; set; }
+        private string CancelButtonText = "Cancel";
         private ScottButton DisabledDefaultButton { get; set; }
         private ScottButton DisabledCancelButton { get; set; }
-
-        private string _value = "";
 
         public Test()
         {
@@ -19,5 +18,19 @@ namespace ScottBlazorLibrary.UseCase.ServerSideRendering.Components.Pages
 
         protected override void OnInitialized() { }
 
+        private void Clicked()
+        {
+            Task.Delay(550);
+        }
+
+        private void MouseDown(MouseEventArgs e)
+        {
+            CancelButtonText = "Yo!";
+        }
+
+        private void MouseUp(MouseEventArgs e)
+        {
+            CancelButtonText = "Cancel";
+        }
     }
 }

@@ -5,18 +5,12 @@
 
 <h3>Test of ScottButton</h3>
 
-<ScottButton @ref="@DefaultButton" Text="Hello" Style="ScottButtonStyle.Default" Disabled="false" OnClickCallback="@BeenClicked" />
+<ScottButton @ref="@DefaultButton" Text="Hello" Style="ScottButtonStyle.Default" Disabled="false" OnClickCallback="@Clicked" />
 
-<ScottButton @ref="@CancelButton" Text="Cancel" Style="ScottButtonStyle.Cancel" Disabled="false" />
+<ScottButton @ref="@CancelButton" Text="@CancelButtonText" Style="ScottButtonStyle.Cancel" Disabled="false" OnMouseDownCallback="@MouseDown" OnMouseUpCallback="@MouseUp" />
 
-<ScottButton @ref="DisabledDefaultButton" Text="Hello Disabled" Style="ScottButtonStyle.Default" Disabled="true" />
+<ScottButton @ref="@DisabledDefaultButton" Text="Hello Disabled" Style="ScottButtonStyle.Default" Disabled="true" />
 
-<ScottButton @ref="DisabledCancelButton" Text="Cancel Disabled" Style="ScottButtonStyle.Cancel" Disabled="true" />
+<ScottButton @ref="@DisabledCancelButton" Text="Cancel Disabled" Style="ScottButtonStyle.Cancel" Disabled="true" />
 
-@code {
-    private void BeenClicked()
-    {
-        Task.Delay(550);
-    }
-}
 

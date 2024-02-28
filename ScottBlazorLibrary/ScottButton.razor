@@ -4,6 +4,7 @@
 
 <style>
     .button-default {
+        width: @Style.Width;
         color: white;
         background-color: rgb(57, 88, 132);
         padding: 10px 20px 10px 20px;
@@ -24,6 +25,7 @@
         }
 
     .button-cancel {
+        width: @Style.Width;
         color: white;
         background-color: red;
         padding: 10px 20px 10px 20px;
@@ -44,5 +46,5 @@
         }
 </style>
 <p>
-    <button class="@Style.StyleName" disabled="@Disabled" onclick="@OnClickCallback">@Text</button>
+    <button class="@Style.StyleName" disabled="@Disabled" onclick="@OnClickCallback" onmousedown="@OnMouseDownCallback" onmouseup="@OnMouseUpCallback" onmouseover="@OnMouseOverCallback" onmouseout="@OnMouseOutCallback" onmousewheel="@OnMouseWheelCallBack">@Text</button>
 </p>
