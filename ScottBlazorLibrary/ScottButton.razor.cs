@@ -11,8 +11,6 @@ namespace ScottBlazorLibrary.Buttons
         public ScottButtonStyle Style { get; set; }
         [Parameter]
         public bool Disabled { get; set; }
-        [Parameter]
-        public string Width { get; set; }
 
         public ScottButton()
         {

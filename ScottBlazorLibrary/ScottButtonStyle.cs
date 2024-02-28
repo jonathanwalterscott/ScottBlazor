@@ -1,26 +1,16 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ScottBlazorLibrary
+﻿namespace ScottBlazorLibrary
 {
     public class ScottButtonStyle : Enumeration
     {
-        public static ScottButtonStyle Default = new(1, "Default", "button-default", "100px");
-        public static ScottButtonStyle Cancel = new(2, "Cancel", "button-cancel", "100px");
+        public static ScottButtonStyle Default = new("Default", "button-default");
+        public static ScottButtonStyle Save = new("Save", "button-save");
+        public static ScottButtonStyle Cancel = new("Cancel", "button-cancel");
 
-        public string Width = "";
+        public string ClassName { get; private set; }
 
-        public string StyleName { get; private set; }
-
-        private ScottButtonStyle(int id, string name, string styleName, string width) : base(id, name) 
+        private ScottButtonStyle(string name, string className) : base(name) 
         {
-            StyleName = styleName;
-            Width = width;
+            ClassName = className;
         }
     }
 }

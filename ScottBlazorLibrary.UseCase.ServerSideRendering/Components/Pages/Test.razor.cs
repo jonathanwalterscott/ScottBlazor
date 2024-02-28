@@ -8,6 +8,7 @@ namespace ScottBlazorLibrary.UseCase.ServerSideRendering.Components.Pages
     {
         private ScottButton DefaultButton { get; set; }
         private ScottButton CancelButton { get; set; }
+        private ScottButton SaveButton { get; set; }
         private string CancelButtonText = "Cancel";
         private ScottButton DisabledDefaultButton { get; set; }
         private ScottButton DisabledCancelButton { get; set; }
@@ -21,6 +22,11 @@ namespace ScottBlazorLibrary.UseCase.ServerSideRendering.Components.Pages
         private void Clicked()
         {
             Task.Delay(550);
+        }
+
+        private void SaveClicked()
+        {
+
         }
 
         private void MouseDown(MouseEventArgs e)

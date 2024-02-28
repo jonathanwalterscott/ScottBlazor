@@ -4,7 +4,6 @@
 
 <style>
     .button-default {
-        width: @Style.Width;
         color: white;
         background-color: rgb(57, 88, 132);
         padding: 10px 20px 10px 20px;
@@ -24,8 +23,28 @@
             box-shadow: none;
         }
 
+    .button-save {
+        color: white;
+        background-color: rgb(0, 153, 0);
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px grey;
+        margin: 10px;
+    }
+
+        .button-save:hover {
+            box-shadow: 4px 4px 4px grey;
+            background-color: rgb(49, 172, 49);
+            transition: background-color 0.15s, box-shadow 0.15s;
+        }
+
+        .button-save:disabled {
+            background-color: grey;
+            box-shadow: none;
+        }
+
     .button-cancel {
-        width: @Style.Width;
         color: white;
         background-color: red;
         padding: 10px 20px 10px 20px;
@@ -46,5 +65,5 @@
         }
 </style>
 <p>
-    <button class="@Style.StyleName" disabled="@Disabled" onclick="@OnClickCallback" onmousedown="@OnMouseDownCallback" onmouseup="@OnMouseUpCallback" onmouseover="@OnMouseOverCallback" onmouseout="@OnMouseOutCallback" onmousewheel="@OnMouseWheelCallBack">@Text</button>
+    <button class="@Style.ClassName" disabled="@Disabled" onclick="@OnClickCallback" onmousedown="@OnMouseDownCallback" onmouseup="@OnMouseUpCallback" onmouseover="@OnMouseOverCallback" onmouseout="@OnMouseOutCallback" onmousewheel="@OnMouseWheelCallBack">@Text</button>
 </p>

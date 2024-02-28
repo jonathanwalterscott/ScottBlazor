@@ -3,9 +3,8 @@
     public abstract class Enumeration : IComparable
     {
         public string Name { get; private set; }
-        public int Id { get; private set; }
 
-        protected Enumeration(int id, string name) => (Id, Name) = (id, name);
+        protected Enumeration(string name) => (Name) = (name);
 
         public override string ToString() => Name;
 
@@ -17,11 +16,11 @@
             }
 
             var typeMatches = GetType().Equals(obj.GetType());
-            var valueMatches = Id.Equals(otherValue.Id);
+            var valueMatches = Name.Equals(otherValue.Name);
 
             return typeMatches && valueMatches;
         }
 
-        public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id);
+        public int CompareTo(object other) => Name.CompareTo(((Enumeration)other).Name);
     }
 }
